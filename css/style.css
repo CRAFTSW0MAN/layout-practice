@@ -1,26 +1,26 @@
-header {
+.header {
   background: #f2f2f2;
 }
-header .header_container {
+.header__container {
   width: 1200px;
   margin: auto;
 }
-header .header_block {
+.header__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 97px;
 }
-header .header_block .nav {
+.header__block .nav {
   display: flex;
 }
-header .header_block .nav .nav__item {
+.header__block .nav__item {
   margin: 0 20px;
 }
-header .header_block .header_buttons {
+.header__block .header__buttons {
   display: flex;
 }
-header .header_block .header_buttons .buttons_01 {
+.header__block .header__buttons .buttons-01 {
   background: #EF7F04;
   border-radius: 3px;
   color: #FFFFFF;
@@ -28,7 +28,7 @@ header .header_block .header_buttons .buttons_01 {
   padding: 10px 22px;
   margin-right: 14px;
 }
-header .header_block .header_buttons .buttons_02 {
+.header__block .header__buttons .buttons-02 {
   background-color: #3B3A63;
   border-radius: 3px;
   color: #FFFFFF;
@@ -43,61 +43,54 @@ header .header_block .header_buttons .buttons_02 {
   background-image: linear-gradient(to right, rgba(9, 5, 47, 0.85) 0%, rgba(49, 29, 94, 0.85) 100%);
 }
 
-.section-services {
+.services {
   background: #f2f2f2;
 }
-.section-services .services {
+.services-container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.section-services .services .services_title {
+.services-container__title {
   text-align: center;
   font-size: large;
   font-weight: 900;
   margin-bottom: 48px;
 }
-.section-services .services .windows {
+.services-container .windows {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.section-services .services .windows .window_name {
+.services-container .windows-card {
+  width: 49%;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.services-container .windows-card__name {
   display: flex;
   align-items: center;
   padding: 55px 0 38px 50px;
 }
-.section-services .services .windows .window_name .winsows_title {
+.services-container .windows-card__name .windows-card__title {
   width: 220px;
   font-size: larger;
   font-weight: 900;
   margin-left: 20px;
 }
-.section-services .services .windows .window-test {
+.services-container .windows-card__content {
   width: 280px;
   padding: 0 0 38px 50px;
 }
-.section-services .services .windows .window01 {
-  width: 49%;
-  border-radius: 3px;
-  margin-bottom: 20px;
+.services-container .windows .windows-01 {
   background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services01.png);
 }
-.section-services .services .windows .window02 {
-  width: 49%;
-  border-radius: 3px;
-  margin-bottom: 20px;
+.services-container .windows .windows-02 {
   background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services02.png);
 }
-.section-services .services .windows .window03 {
-  width: 49%;
-  border-radius: 3px;
-  margin-bottom: 20px;
+.services-container .windows .windows-03 {
   background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services03.png);
 }
-.section-services .services .windows .window04 {
-  width: 49%;
-  border-radius: 3px;
-  margin-bottom: 20px;
+.services-container .windows .windows-04 {
   background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services04.png);
 }/*# sourceMappingURL=style.css.map */
