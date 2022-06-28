@@ -1,0 +1,44 @@
+header {
+    background: #f2f2f2;
+
+    .header_container {
+        width: 1200px;
+        margin: auto;
+    }
+
+    .header_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 97px;
+
+        .nav {
+            display: flex;
+
+            .nav__item {
+                margin: 0 20px;
+            }
+        }
+
+        .header_buttons{
+            display: flex;
+
+            .buttons_01 {
+                background: #EF7F04;
+                border-radius: 3px;
+                color:  #FFFFFF;
+                font-size: 13px;
+                padding: 10px 22px;
+                margin-right: 14px;
+            }
+
+            .buttons_02 {
+                background-color: #3B3A63;
+                border-radius: 3px;
+                color:  #FFFFFF;
+                font-size: 13px;
+                padding: 10px 22px;
+            }
+        }
+    }
+}

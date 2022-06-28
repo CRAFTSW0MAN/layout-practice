@@ -1,0 +1,40 @@
+header {
+  background: white;
+}
+header .header_container {
+  width: 1200px;
+  margin: 0 auto;
+}
+header .header_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 97px;
+}
+header .header_block .nav {
+  display: flex;
+}
+header .header_block .nav .nav__item {
+  margin: 0 20px;
+}
+header .header_block .header_buttons {
+  width: 380px;
+}
+header .header_block .header_buttons .buttons_01 {
+  background: #EF7F04 url(../imges/sloy1.svg) 10px 50% no-repeat;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 15px 20px 15px 47px;
+  margin-right: 14px;
+}
+header .header_block .header_buttons .buttons_02 {
+  background-color: #3B3A63;
+  background-image: url(../imges/sloy2.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 15px 20px 15px 47px;
+}/*# sourceMappingURL=header.css.map */

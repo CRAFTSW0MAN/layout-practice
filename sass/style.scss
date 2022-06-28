@@ -1,0 +1,10 @@
+@mixin windows {
+    width: 49%;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+@import "./blocks/header";
+@import "./blocks/login";
+@import "./blocks/our_services";
+
