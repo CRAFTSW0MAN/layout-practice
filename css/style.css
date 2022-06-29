@@ -1,0 +1,96 @@
+.header {
+  background: #f2f2f2;
+}
+.header__container {
+  width: 1200px;
+  margin: auto;
+}
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 97px;
+}
+.header__block .nav {
+  display: flex;
+}
+.header__block .nav__item {
+  margin: 0 20px;
+}
+.header__block .header__buttons {
+  display: flex;
+}
+.header__block .header__buttons .buttons-01 {
+  background: #EF7F04;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 10px 22px;
+  margin-right: 14px;
+}
+.header__block .header__buttons .buttons-02 {
+  background-color: #3B3A63;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 10px 22px;
+}
+
+.login {
+  display: flex;
+  height: 562px;
+  margin-bottom: 70px;
+  background-image: linear-gradient(to right, rgba(9, 5, 47, 0.85) 0%, rgba(49, 29, 94, 0.85) 100%);
+}
+
+.services {
+  background: #f2f2f2;
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services-container__title {
+  text-align: center;
+  font-size: large;
+  font-weight: 900;
+  margin-bottom: 48px;
+}
+.services-container .windows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.services-container .windows-card {
+  width: 49%;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+.services-container .windows-card__name {
+  display: flex;
+  align-items: center;
+  padding: 55px 0 38px 50px;
+}
+.services-container .windows-card__name .windows-card__title {
+  width: 220px;
+  font-size: larger;
+  font-weight: 900;
+  margin-left: 20px;
+}
+.services-container .windows-card__content {
+  width: 280px;
+  padding: 0 0 38px 50px;
+}
+.services-container .windows .windows-01 {
+  background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services01.png);
+}
+.services-container .windows .windows-02 {
+  background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services02.png);
+}
+.services-container .windows .windows-03 {
+  background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services03.png);
+}
+.services-container .windows .windows-04 {
+  background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services04.png);
+}/*# sourceMappingURL=style.css.map */
