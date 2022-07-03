@@ -161,18 +161,16 @@ body {
   font-size: 21px;
   font-weight: 700;
   margin: 10px 0;
-  text-align: left;
 }
 .products-container .specification-card .parameters-info .parameters-info-solid {
-  flex: 1 0;
+  flex: 1;
   border-bottom: 1px dotted #BABABA;
   border-width: 2px;
-  height: 14px;
   margin: 10px 0.4em;
 }
 .products-container .specification-card .parameters-info .parameters-info-info {
   text-align: left;
-  width: 30%;
+  width: 25%;
   font-size: 21px;
   font-weight: 700;
   margin: 10px 0;
