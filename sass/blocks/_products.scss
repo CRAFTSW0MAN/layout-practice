@@ -1,0 +1,93 @@
+.products {
+    background: #f2f2f2;
+
+    &-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    
+        &__title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+            margin: 48px 0;
+        }
+
+        &__menu {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin-bottom: 48px;
+
+            .button {
+                border-radius: 3px;
+                font-size: 21px;
+                padding: 10px 22px;
+            }
+            .button:focus {
+                background-color: #EF7F04;
+                color: white;
+            }
+        }
+
+        .specification {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            background-color: white;
+            margin-bottom: 48px;
+            border-radius: 3px;
+            height: 461px;
+
+            &__image {
+                border-radius: 3px;
+            }
+
+            &-card {
+                margin: 85px 32px 52px 30px;
+                
+
+                &__title {
+                    font-size: 36px;
+                    font-weight: 700;
+                    color: #EF7F04;                
+                }
+
+                &__info {
+                    padding: 40px 160px 50px 0;
+                    font-size: 21px;                
+                }
+
+                .parameters{
+
+                    .parameters-info {
+                        display: flex;
+                        justify-content: space-between;                                      
+    
+                        .parameters-info-name {                           
+                            font-size: 21px;
+                            font-weight: 700;
+                            margin: 10px 0;
+                            text-align: left;
+                        }
+    
+                        .parameters-info-solid {
+                            flex: 1 0;
+                            border-bottom: 1px dotted #BABABA;
+                            border-width: 2px;
+                            height: 14px;
+                            margin: 10px 0.4em                  
+                        }
+    
+                        .parameters-info-info {                            
+                            text-align: left;
+                            width: 30%;
+                            font-size: 21px;
+                            font-weight: 700;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

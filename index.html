@@ -2,9 +2,9 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title></title>        
         <link rel="stylesheet" href="./css/style.css">
-        ,<link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/reset.css">
     </head>
 
     <body>
@@ -15,9 +15,9 @@
                     <nav class="header__nav nav">
                         <ul class="nav">
                             <li class="nav__item">
-                                <a href="#link">Услуги</a></li>
+                                <a href="#Наши услуги">Услуги</a></li>
                             <li class="nav__item">
-                                <a href="#link">Продукция</a></li>
+                                <a href="#Продукция">Продукция</a></li>
                             <li class="nav__item">
                                 <a href="#link">О компании</a></li>
                             <li class="nav__item">
@@ -48,47 +48,81 @@
 
         <section class="services">
             <div class="services-container">
-                <h2 class="services-container__title">Наши услуги</h2>
+                <h2 class="services-container__title" id="Наши услуги">Наши услуги</h2>
                 <div class="windows">
                     <div class="windows-card windows-01">
                         <div class="windows-card__name">
                             <img src="./imges/window01.svg" alt="окно1">
                             <h2 class="windows-card__title">Установка<br> пластиковых окон</h2>
                         </div>
-
                         <p class="windows-card__content">Устанавливаем пластиковые окна Rehau от проверенного производителя с гарантией качества</p>
-
                     </div>
                     <div class="windows-card windows-02">
                         <div class="windows-card__name">
                             <img src="./imges/window02.svg" alt="окно2">
                             <h2 class="windows-card__title">Остекление балконов и лоджий</h2>
                         </div>
-
                         <p class="windows-card__content">Занимаемся остеклением и отделкой балконов и лоджий. Теплое и холодное остекление, изготовление выносов и крыш. Беремся за сложные объекты</p>
-
                     </div>
                     <div class="windows-card windows-03">
                         <div class="windows-card__name">
                             <img src="./imges/window03.svg" alt="окно3">
                             <h2 class="windows-card__title">Остекление<br>  коттеджей и дач</h2>
                         </div>
-
                         <p class="windows-card__content">Остекление и отделка под ключ: от коттеджей и дач до террас и беседок. Выделяем личного технолога под каждый объект</p>
-
                     </div>
                     <div class="windows-card windows-04">
                         <div class="windows-card__name">
                             <img src="./imges/window04.svg" alt="окно4">
                             <h2 class="windows-card__title">Остекление<br> корпоративных объектов</h2>
-                        </div>  
-
+                        </div>
                         <p class="windows-card__content">Реализуем сложные проекты по остеклению торговых центров,ресторанов, производственных помещений и офисов</p>
-
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="products">
+            <div class="products-container">
+                <h2 class="products-container__title" id="Продукция"> Продукция</h2>
+                <div class="products-container__menu ">                    
+                        <button class="button">Стандарт</button>
+                        <button class="button">Бизнес</button>
+                        <button class="button">Премиум</button>
+                        <button class="button">Эксклюзив</button>                    
+                </div>
+                <div class="products-container__content specification">
+                    <img class="specification__image"src="/imges/glass.jpg" alt="стекло">
+                    <div class="specification-card">
+                        <div class="specification-card__title">
+                            <h1 class="title">Rehau Blitz New</h1>
+                        </div>
+                        <p class="specification-card__info">Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. Практичный выбор</p>
+                        <div class="specification-card__parameters parameters">
+                            <div class="parameters-info">
+                                <div class="parameters-info-name">Системная глубина</div>
+                                <div class="parameters-info-solid"></div>
+                                <div class="parameters-info-info">60/60 мм</div>
+                            </div>
+                            <div class="parameters-info">
+                                <div class="parameters-info-name">Ширина стеклопакета</div>
+                                <div class="parameters-info-solid"></div>
+                                <div class="parameters-info-info">24/31 мм</div>
+                            </div>
+                            <div class="parameters-info">
+                                <div class="parameters-info-name">Воздушные камеры</div>
+                                <div class="parameters-info-solid"></div>
+                                <div class="parameters-info-info">3</div>
+                            </div>
+                            <div class="parameters-info">
+                                <div class="parameters-info-name">Теплосопротивление</div>
+                                <div class="parameters-info-solid"></div>
+                                <div class="parameters-info-info">0,70 м2С/ВТ</div>
+                            </div>                          
+                        </div>
+                    </div>
+                </div>
+            </с>
         </section>
     </body>
 
