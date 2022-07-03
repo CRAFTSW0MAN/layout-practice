@@ -153,24 +153,24 @@ body {
   padding: 40px 160px 50px 0;
   font-size: 21px;
 }
-.products-container .specification-card .parameters .parameters-info {
+.products-container .specification-card .parameters-info {
   display: flex;
   justify-content: space-between;
 }
-.products-container .specification-card .parameters .parameters-info .parameters-info-name {
+.products-container .specification-card .parameters-info .parameters-info-name {
   font-size: 21px;
   font-weight: 700;
   margin: 10px 0;
   text-align: left;
 }
-.products-container .specification-card .parameters .parameters-info .parameters-info-solid {
+.products-container .specification-card .parameters-info .parameters-info-solid {
   flex: 1 0;
   border-bottom: 1px dotted #BABABA;
   border-width: 2px;
   height: 14px;
   margin: 10px 0.4em;
 }
-.products-container .specification-card .parameters .parameters-info .parameters-info-info {
+.products-container .specification-card .parameters-info .parameters-info-info {
   text-align: left;
   width: 30%;
   font-size: 21px;
