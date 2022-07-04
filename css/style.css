@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;700&display=swap");
+body {
+  background-color: #f2f2f2;
+  font-family: roboto;
+}
+
 .header {
   background: #f2f2f2;
 }
@@ -52,7 +58,7 @@
 }
 .services-container__title {
   text-align: center;
-  font-size: large;
+  font-size: 24px;
   font-weight: 900;
   margin-bottom: 48px;
 }
@@ -74,7 +80,7 @@
 }
 .services-container .windows-card__name .windows-card__title {
   width: 220px;
-  font-size: larger;
+  font-size: 24px;
   font-weight: 900;
   margin-left: 20px;
 }
@@ -93,4 +99,79 @@
 }
 .services-container .windows .windows-04 {
   background-image: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%), url(/imges/services04.png);
+}
+
+.products {
+  background: #f2f2f2;
+}
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products-container__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 48px 0;
+}
+.products-container__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.products-container__menu .button {
+  border-radius: 3px;
+  font-size: 21px;
+  padding: 10px 22px;
+}
+.products-container__menu .button:focus {
+  background-color: #EF7F04;
+  color: white;
+}
+.products-container .specification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 48px;
+  border-radius: 3px;
+  height: 461px;
+}
+.products-container .specification__image {
+  border-radius: 3px;
+}
+.products-container .specification-card {
+  margin: 85px 32px 52px 30px;
+}
+.products-container .specification-card__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #EF7F04;
+}
+.products-container .specification-card__info {
+  padding: 40px 160px 50px 0;
+  font-size: 21px;
+}
+.products-container .specification-card .parameters-info {
+  display: flex;
+  justify-content: space-between;
+}
+.products-container .specification-card .parameters-info .parameters-info-name {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.products-container .specification-card .parameters-info .parameters-info-solid {
+  flex: 1;
+  border-bottom: 1px dotted #BABABA;
+  border-width: 2px;
+  margin: 13px 0.4em;
+}
+.products-container .specification-card .parameters-info .parameters-info-info {
+  text-align: left;
+  width: 25%;
+  font-size: 21px;
+  font-weight: 700;
+  margin: 10px 0;
 }/*# sourceMappingURL=style.css.map */
