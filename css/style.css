@@ -6,26 +6,26 @@ body {
 .header {
   background: #f2f2f2;
 }
-.header__container {
+.header .header-container {
   width: 1200px;
   margin: auto;
 }
-.header__block {
+.header .header-container .header-container__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 97px;
 }
-.header__block .nav {
+.header .header-container .header-container__block .nav {
   display: flex;
 }
-.header__block .nav__item {
+.header .header-container .header-container__block .nav__item {
   margin: 0 20px;
 }
-.header__block .header__buttons {
+.header .header-container .header-container__block .header-container__buttons {
   display: flex;
 }
-.header__block .header__buttons .buttons-01 {
+.header .header-container .header-container__block .header-container__buttons .buttons-01 {
   background: #EF7F04;
   border-radius: 3px;
   color: #FFFFFF;
@@ -33,7 +33,7 @@ body {
   padding: 10px 22px;
   margin-right: 14px;
 }
-.header__block .header__buttons .buttons-02 {
+.header .header-container .header-container__block .header-container__buttons .buttons-02 {
   background-color: #3B3A63;
   border-radius: 3px;
   color: #FFFFFF;
@@ -47,7 +47,7 @@ body {
   background-image: url(/imges/login1.jpg), url(/imges/login2.jpg);
   background-repeat: no-repeat;
   background-position: 0 0, 1219px 0;
-  margin: 0 auto;
+  margin: auto;
 }
 .login-container {
   background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(10, 8, 31, 0.8) 100%);
@@ -75,7 +75,7 @@ body {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 40px 20px;
 }
 .login-container .advantages-block__info {
   width: 150px;
@@ -93,10 +93,11 @@ body {
   margin: 0 auto;
 }
 .services-container__title {
+  display: block;
   text-align: center;
   font-size: 24px;
   font-weight: 900;
-  margin-bottom: 48px;
+  padding: 50px 0;
 }
 .services-container .windows {
   display: flex;
