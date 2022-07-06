@@ -5,10 +5,11 @@
         margin: 0 auto;
     
         &__title {
+            display: block;
             text-align: center;
             font-size: 24px;
             font-weight: 900;
-            margin-bottom: 48px;
+            padding: 50px 0;
         }
     
         .windows {
