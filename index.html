@@ -57,22 +57,31 @@
                             <p class="">Гарантия высочайшего качества нашей продукции</p>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="login-container__form form">
                     <form class="form-block" action="#">
-                        <div class="form-block__info">
-                            <input type="text" name="username" placeholder="Представьтесь, пожалуйста">
-                            <input type="text" name="phone_number" placeholder="Номер телефона">
-                            <input type="email" name="mail" placeholder="E-mail">
+                        <div class="form-block__info info">
+                            <h2 class="info-title">Вызвать замершика на дом</h2>
+                            <input class="info-input" type="text" name="username" placeholder="Представьтесь, пожалуйста">
+                            <input class="info-input" type="number" name="phone_number" placeholder="Номер телефона">
+                            <input class="info-input" type="email" name="mail" placeholder="E-mail">                           
+                            <div class="info-checkbox check">                                    
+                                <label class="check-label">
+                                    <input class="check-label__input" type="checkbox">
+                                    Согласен на обработку персональных данных в соответствии с политикой конфиденциальности
+                                    <span class="check-label__box"></span> 
+                                </label>
+                            </div>
                         </div>
+                        <div class="form-block__button">
+                            <button class="button">Отправить заявку</button>
+                        </div>
+
+                        <img class="info-img" src="/imges/scale.svg" alt="scale">
                     </form>
-                    <div class="form-button"></div>
-                    <div class="form-img"></div>
                 </div>
-                
             </div>
-            <div class="login-img"></div>
         </main>
 
         <section class="services">

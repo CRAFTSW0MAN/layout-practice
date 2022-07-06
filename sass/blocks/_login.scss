@@ -10,17 +10,16 @@
         background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(10, 8, 31, 0.8) 100%); 
         display: flex;
         justify-content:center;
-        
+        align-items: center;
 
         .advantages {
-            padding: 10px;
 
-            &-header{
+            &-header {
                 font-size: 36px;
                 color: #FFFFFF;
                 max-width: 430px;
                 font-weight: lighter;
-                padding: 120px 20px 50px 20px;
+                padding: 80px 20px 50px 0;
 
                 span {
                     color: #EF7F04;
@@ -34,23 +33,101 @@
                 color: #FFFFFF;
                 font-size: 14px;
                 display: flex;
-                justify-content: space-between;
-                padding: 20px 20px 40px 20px;
+                justify-content: space-around;
+                padding: 20px 30px 70px 0;
 
                 &__info {
                     width: 150px;
                     margin: 20px;
 
-                    p{
+                    p {
                         padding: 30px 0 0 0;
                     }
                 }
-
-
             }
         }
-        
-                        
-    }
+
+        &__form {
+            background-color: #FFFFFF;
+            max-width: 406px;
+            height:  400px;
+            border-radius: 10px;
+            display: flex;
+            align-items:stretch;
+            padding: 0 0 30px;
+            text-align: center;
+            position: relative;
+
+            .form-block__info {
+                width: 406px;
+                
+                .info-title {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 40px;
+                }
     
+                .info-input {
+                    display: block;
+                    margin: 15px auto;
+                    width: 320px;
+                    height: 40px;
+                    background-color: #E2E2E2;
+                    border-radius: 3px;
+                    padding: 0 0 0 10px;
+                } 
+                
+                .check {
+                    padding: 0 1em 0 3em;
+                    
+
+                    .check-label {
+                        position: relative;
+                        font-size: 14px;
+
+                        .check-label__input {
+                            position: absolute;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+    
+                        .check-label__box {
+                            position: absolute;
+                            margin-left: -23em;
+                            margin-top: -1em;
+                            height: 2em;
+                            width: 2em;
+                            background-image: url(/imges/checkOFF.svg);
+                        }
+
+                        .check-label__input:focus + .check-label__box {
+                            background-image: url(/imges/checkON.svg), url(/imges/checkOFF.svg);
+                            background-repeat: no-repeat;
+                        }
+
+                        .check-label__input:checked:focus + .check-label__box {
+                            background-image: url(/imges/checkOFF.svg);
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+
+            .button {
+                background: #EF7F04;
+                border-radius: 3px;
+                color:  #FFFFFF;
+                font-size: 14px;
+                padding: 15px 35px;
+                margin: 20px 0 40px;
+            }
+
+            .info-img {
+                position: absolute;
+                left: -21%;
+                bottom: -12%;
+            }
+        }
+    }
 }
