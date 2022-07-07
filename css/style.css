@@ -50,7 +50,7 @@ body {
   margin: auto;
 }
 .login-container {
-  background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(10, 8, 31, 0.8) 100%);
+  background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(3, 2, 18, 0.8) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,4 +280,50 @@ body {
   font-size: 21px;
   font-weight: 700;
   margin: 10px 0;
+}
+
+.guarantee {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.guarantee-container {
+  background-image: url(/imges/guarantee_backgraund.jpg);
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+.guarantee-container__list {
+  background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(3, 2, 18, 0.8) 100%);
+  border-radius: 3px;
+  text-align: center;
+  height: 436px;
+  padding: 0 15px;
+  margin: 40px 0;
+}
+.guarantee-container__list .catalog__title {
+  margin: 50px;
+}
+.guarantee-container__list .catalog-block {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+}
+.guarantee-container__list .catalog-block .medal__image {
+  height: 90px;
+}
+.guarantee-container__list .catalog-block .medal__info {
+  text-align: center;
+  max-width: 155px;
+  max-height: 40px;
+  margin-top: 35px;
+}
+.guarantee-button {
+  background-color: #3B3A63;
+  border-radius: 3px;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  margin-bottom: 40px;
+}
+.guarantee-button__img {
+  margin: 5px 15px 5px 0;
 }/*# sourceMappingURL=style.css.map */

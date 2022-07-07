@@ -1,0 +1,55 @@
+.guarantee {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    &-container {
+        background-image: url(/imges/guarantee_backgraund.jpg);
+        background-repeat: no-repeat;
+        border-radius: 3px;
+
+        &__list {
+            background: radial-gradient(rgba(9, 5, 47, 0.8) 0%, rgba(3, 2, 18, 0.8) 100%);
+            border-radius: 3px;
+            text-align: center;
+            height: 436px;
+            padding: 0 15px;
+            margin: 40px 0;
+
+            .catalog__title {
+                margin: 50px;
+            }
+
+            .catalog-block {
+                color: #FFFFFF;
+                display: flex;
+                justify-content: space-around;
+
+                .medal__image{
+                    height: 90px;
+                }
+
+                .medal__info {
+                    text-align: center;
+                    max-width: 155px;
+                    max-height: 40px;
+                    margin-top: 35px;
+                }
+            }
+        
+        
+        }
+    }
+
+    &-button {
+        background-color: #3B3A63;
+        border-radius: 3px;
+        color:  #FFFFFF;
+        padding: 10px 30px;
+        margin-bottom: 40px;
+
+        &__img {
+            margin: 5px 15px 5px 0;
+        }
+    }
+}
