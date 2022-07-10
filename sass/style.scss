@@ -1,7 +1,15 @@
 @mixin windows {
     width: 49%;
+    height: 268px;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin: 20px 3px;
+}
+
+@mixin windows1 {
+    width: 592px;
+    height: 268px;
+    border-radius: 3px;
+    margin: 20px 3px;
 }
 
 body {

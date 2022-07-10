@@ -1,6 +1,5 @@
 .products {
-    background: #f2f2f2;
-
+    
     &-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -32,7 +31,7 @@
 
         .specification {
             display: flex;
-            justify-content:space-between;
+            justify-content: center;
             align-items: center;
             background-color: white;
             margin-bottom: 48px;
@@ -40,11 +39,22 @@
             height: 461px;
 
             &__image {
+                background-image: url(/imges/glass.jpg);
+                background-position: 50%;
+                background-size: cover;
                 border-radius: 3px;
+                width: 567px;
+                height: 461px;
+
+                @media screen and (max-width: 992px) {
+                    width: 404px;
+                    height: 461px;
+                }
             }
 
             &-card {
-                margin: 85px 32px 52px 30px;                
+                margin: 85px 32px 52px 30px;
+                width: 511px;                
 
                 &__title {
                     font-size: 36px;
@@ -54,7 +64,11 @@
 
                 &__info {
                     padding: 40px 160px 50px 0;
-                    font-size: 21px;                
+                    font-size: 21px;
+                    
+                    @media screen and (max-width: 992px) {
+                        padding: 40px 90px 50px 0px;
+                    }
                 }
 
                 .parameters-info {
@@ -65,13 +79,21 @@
                         font-size: 21px;
                         font-weight: 700;
                         margin: 10px 0;
+
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
 
                     .parameters-info-solid {
                         flex: 1;
                         border-bottom: 1px dotted #BABABA;
                         border-width: 2px;
-                        margin: 13px 0.4em;                  
+                        margin: 13px 0.4em;
+                        
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
 
                     .parameters-info-info {                            
@@ -80,8 +102,20 @@
                         font-size: 21px;
                         font-weight: 700;
                         margin: 10px 0;
+
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }
                     }
+
                 }
+
+                @media screen and (max-width: 992px) {
+                    padding: 0 0 0 20px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                margin: 0 40px;
             }
         }
     }
