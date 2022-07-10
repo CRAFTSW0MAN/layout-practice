@@ -40,10 +40,18 @@
                     width: 150px;
                     margin: 20px;
 
+                    .premium_img {
+                        height: 79px;
+                    }
+
                     p {
                         padding: 30px 0 0 0;
                     }
                 }
+            }
+
+            @media screen and (max-width: 992px) {
+                padding: 0 0 0 55px;
             }
         }
 
@@ -128,6 +136,25 @@
                 left: -21%;
                 bottom: -12%;
             }
+
+            @media screen and (max-width: 992px) {
+                display: none;
+            }
         }
+
+        @media screen and (max-width: 992px) {
+            justify-content: flex-start;
+        }
+
+        @media screen and (max-width: 992px) {
+            background: linear-gradient(to right, rgba(7, 6, 30, 0.8) 0%, rgba(7, 6, 32, 0.8) 50%, rgb(50, 50, 72) 65%, rgb(7, 6, 30, 0.8) 70%)
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        max-height: 562px;
+        width: 992px;
+        background-image: url(/imges/login3.png), url(/imges/login4.png);
+        background-position: 0 0, 630px 0;              
     }
 }
