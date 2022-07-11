@@ -1,0 +1,130 @@
+.about-company {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 48px 0;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-bottom: 48px;
+
+        .button {
+            border-radius: 3px;
+            font-size: 18px;
+            padding: 10px 22px;
+            margin: 15px;
+        }
+        .button:focus {
+            background-color: #EF7F04;
+            color: white;
+        }
+    }
+
+    .preview {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-bottom: 48px;
+        border-radius: 3px;
+        height: 461px;
+
+        &-block {
+            width: 50%;
+
+            &__image {
+                display: block;
+                margin: 45px 0 0 50px;
+
+                @media screen and (max-width: 992px) {
+                    margin: 45px 0 0 25px;
+                }
+            }
+
+            &__text {
+                max-width: 55%;
+                line-height: 22px;
+                margin: 50px 30px 50px 235px;
+
+                @media screen and (max-width: 992px) {
+                    margin: 50px 30px 50px 135px;
+                }
+
+            } 
+
+        }
+
+        &__image {
+            background-image: url(/imges/preview.jpg);
+            background-position: 50%;
+            background-size: cover;
+            border-radius: 3px;
+            width: 50%;
+            height: 461px;
+
+            @media screen and (max-width: 992px) {
+                width: 447px;
+                height: 461px;
+            }
+        }
+    }
+
+    .benefits {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 48px;
+
+        &-block {
+            display: flex;
+            align-content: flex-start;
+            width: 370px;
+            height: 100px;
+            padding: 50px 15px;
+
+            &__icon {
+                margin: 0 25px;
+                width: 115px;
+                height: 100px;
+
+                @media screen and (max-width: 992px) {
+                    margin: 0 40px 0 0 ;
+                }
+            }
+            &-info {
+                width: 260px;
+
+                &__title {                    
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+
+                &__text {
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+
+    &__button {
+        text-align: center;
+
+        .button {
+            background: #EF7F04;
+            border-radius: 3px;
+            color:  #FFFFFF;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 20px 40px;
+            margin-bottom: 48px;
+        }
+    }
+}

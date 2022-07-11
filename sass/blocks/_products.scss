@@ -7,7 +7,7 @@
         &__title {
             text-align: center;
             font-size: 24px;
-            font-weight: 900;
+            font-weight: 700;
             margin: 48px 0;
         }
 
@@ -19,7 +19,7 @@
 
             .button {
                 border-radius: 3px;
-                font-size: 21px;
+                font-size: 18px;
                 padding: 10px 22px;
                 margin: 15px;
             }
@@ -63,11 +63,13 @@
                 }
 
                 &__info {
-                    padding: 40px 160px 50px 0;
+                    padding: 40px 70px 50px 0;
                     font-size: 21px;
+                    font-weight: 300;
+                    line-height: 21px;
                     
                     @media screen and (max-width: 992px) {
-                        padding: 40px 90px 50px 0px;
+                        padding: 40px 0 50px 0px;
                     }
                 }
 
@@ -76,13 +78,9 @@
                     justify-content: space-between;                                      
 
                     .parameters-info-name {                           
-                        font-size: 21px;
-                        font-weight: 700;
+                        font-size: 18px;
+                        font-weight: 400;
                         margin: 10px 0;
-
-                        @media screen and (max-width: 992px) {
-                            font-size: 18px;
-                        }
                     }
 
                     .parameters-info-solid {
@@ -90,22 +88,14 @@
                         border-bottom: 1px dotted #BABABA;
                         border-width: 2px;
                         margin: 13px 0.4em;
-                        
-                        @media screen and (max-width: 992px) {
-                            font-size: 18px;
-                        }
                     }
 
                     .parameters-info-info {                            
                         text-align: left;
-                        width: 25%;
-                        font-size: 21px;
+                        width: 27%;
+                        font-size: 18px;
                         font-weight: 700;
                         margin: 10px 0;
-
-                        @media screen and (max-width: 992px) {
-                            font-size: 18px;
-                        }
                     }
 
                 }
