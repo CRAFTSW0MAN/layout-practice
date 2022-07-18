@@ -559,4 +559,108 @@ body {
   font-weight: 700;
   padding: 20px 40px;
   margin-bottom: 48px;
+}
+
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 48px 100px 75px 100px;
+}
+.portfolio__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.portfolio-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 47px;
+}
+.portfolio-container__img {
+  width: 215px;
+  height: 216px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 992px) {
+  .portfolio-container__img:last-child {
+    display: none;
+  }
+}
+
+.questions {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 47px;
+}
+.questions-container {
+  background-color: #EF7F1A;
+  border-radius: 7px;
+  padding: 40px 100px 65px 100px;
+}
+.questions-container__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+}
+.questions-container .response {
+  margin-top: 40px;
+}
+.questions-container .response-details {
+  color: #2F2F51;
+  background-color: #FFFFFF;
+  margin: 15px 0;
+  border-radius: 3px;
+  text-indent: 2%;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+.questions-container .response-details__summary {
+  display: block;
+  text-indent: 0;
+  background-color: #EEEEF3;
+  cursor: none;
+  padding: 31px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  background-image: url(/imges/check_questionsOFF.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 30px;
+}
+.questions-container .response-details__summary:hover {
+  color: #EF7F04;
+  background-color: #FFFFFF;
+  background-image: url(/imges/check_questionsHOVER.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 30px;
+}
+.questions-container .response-details__summary:focus {
+  background-color: #FFFFFF;
+  background-image: url(/imges/check_questionsON.jpg);
+  color: #2F2F51;
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-position-y: 30px;
+}
+.questions-container .response-details .menu .menu-list {
+  font-size: 16px;
+  line-height: 19px;
+}
+.questions-container .response-details .menu .menu-list__li:before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+  background-color: #000000;
+}
+@media screen and (max-width: 992px) {
+  .questions-container {
+    padding: 40px 40px 65px 40px;
+  }
 }/*# sourceMappingURL=style.css.map */

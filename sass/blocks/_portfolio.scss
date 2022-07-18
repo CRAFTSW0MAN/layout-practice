@@ -1,0 +1,31 @@
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color:  #FFFFFF;
+    text-align: center;
+    padding: 48px 100px 75px 100px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 47px;
+
+        &__img {
+            width: 215px;
+            height: 216px;
+            border-radius: 3px;
+        }
+
+        @media screen and (max-width: 992px) {
+            &__img:last-child {
+                display: none;
+            }
+        }
+    }
+}
