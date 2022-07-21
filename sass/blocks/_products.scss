@@ -18,15 +18,19 @@
             margin-bottom: 48px;
 
             .button {
+                cursor: pointer;
                 border-radius: 3px;
                 font-size: 18px;
                 padding: 10px 22px;
                 margin: 15px;
+                transition: 200ms;
+
+                &:focus {
+                    background-color: #EF7F04;
+                    color: white;
+                }
             }
-            .button:focus {
-                background-color: #EF7F04;
-                color: white;
-            }
+            
         }
 
         .specification {
@@ -37,6 +41,11 @@
             margin-bottom: 48px;
             border-radius: 3px;
             height: 461px;
+            transition: 1s;
+
+            &:hover {
+                box-shadow: 10px 0 20px #000000;
+            }
 
             &__image {
                 background-image: url(/imges/glass.jpg);

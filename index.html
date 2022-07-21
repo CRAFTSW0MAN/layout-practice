@@ -14,6 +14,23 @@
         <header class="header">
             <div class="header-container">
                 <div class="header-container__block">
+
+                    <!--Само burger меню -->
+                    <div class="header-burger burger">
+                        <input type="checkbox" id="burger-checkbox-trigger">
+                        <label class="burger-checkbox" for="burger-checkbox-trigger">
+                            <span class="burger-trigger"></span>
+                        </label>
+                        <div class="burger-menu">
+                            <div class="burger-menu-item"><a href="#Наши услуги">Услуги</a></div>
+                            <div class="burger-menu-item"><a href="#Продукция">Продукция</a></div>
+                            <div class="burger-menu-item"><a href="#О компании">О компании</a></div>
+                            <div class="burger-menu-item"><a href="#Портфолио">Портфолио</a></div>
+                            <div class="burger-menu-item"><a href="#Вопрос-ответ">Вопрос-ответ</a></div>
+                            <div class="burger-menu-item"><a href="#Контакты">Контакты</a></div>
+                        </div>
+                    </div>
+                    
                     <img class="header-container__img" src="./imges/logo.svg" alt="Окно Хаус">
                     <nav class="header-container__nav nav">
                         <ul class="nav">
@@ -22,15 +39,16 @@
                             <li class="nav__item">
                                 <a href="#Продукция">Продукция</a></li>
                             <li class="nav__item">
-                                <a href="#link">О компании</a></li>
+                                <a href="#О компании">О компании</a></li>
                             <li class="nav__item">
-                                <a href="#link">Портфолио</a></li>
+                                <a href="#Портфолио">Портфолио</a></li>
                             <li class="nav__item">
-                                <a href="#link">Вопрос-ответ</a></li>
+                                <a href="#Вопрос-ответ">Вопрос-ответ</a></li>
                             <li class="nav__item">
-                                <a href="#link">Контакты</a></li>
+                                <a href="#Контакты">Контакты</a></li>
                         </ul>
                     </nav>
+
                     <div class="header-container__buttons buttons">
                         <button class="buttons-01">
                             <img class="button-01__img" src="./imges/sloy1.svg" alt="Лого1">
@@ -70,11 +88,12 @@
                             <input class="info-input" type="text" name="username" placeholder="Представьтесь, пожалуйста">
                             <input class="info-input" type="number" name="phone_number" placeholder="Номер телефона">
                             <input class="info-input" type="email" name="mail" placeholder="E-mail">                           
-                            <div class="info-checkbox check">                                    
+                            <div class="info-checkbox check">
                                 <label class="check-label">
-                                    <input class="check-label__input" type="checkbox">
-                                    Согласен на обработку персональных данных в соответствии с политикой конфиденциальности
-                                    <span class="check-label__box"></span> 
+                                    <input class="check__input" type="checkbox">
+                                    <span class="check--elem"></span>
+                                    Согласен на обработку персональных данных в соответствии 
+                                    <a href="#">с политикой конфиденциальности</a>
                                 </label>
                             </div>
                         </div>
@@ -200,14 +219,14 @@
         </section>
 
         <section class="about-company">
-            <h2 class="about-company__title">О компании</h2>
+            <h2 class="about-company__title" id="О компании">О компании</h2>
             <div class="about-company__menu">
                 <button class="button">Описание</button>
                 <button class="button">Как мы работаем</button>
                 <button class="button">Отзывы</button>
                 <button class="button">Сертификаты</button>
             </div>
-    
+
             <div class="about-company__preview preview">
                 <div class="preview-block">                    
                     <img class="preview-block__image" src="/imges/big_logo.png" alt="big_logo">
@@ -215,7 +234,7 @@
                 </div>
                 <div class="preview__image"></div>
             </div>
-    
+
             <div class="about-company__benefits benefits">
                 <div class="benefits-block">
                     <img class="benefits-block__icon" src="/imges/benefits01.svg" alt="benefits01">
@@ -270,7 +289,7 @@
         </section>
 
         <section class="portfolio">
-            <h2 class="portfolio__title">Портфолио</h2>
+            <h2 class="portfolio__title" id="Портфолио">Портфолио</h2>
             <div class="portfolio-container">
                 <img class="portfolio-container__img" src="/imges/portfolio01.jpg" alt="portfolio01">
                 <img class="portfolio-container__img" src="/imges/portfolio02.jpg" alt="portfolio02">
@@ -281,7 +300,7 @@
 
         <section class="questions">
             <div class="questions-container">
-                <h2 class="questions-container__title">Вопрос-ответ</h2>
+                <h2 class="questions-container__title" id="Вопрос-ответ">Вопрос-ответ</h2>
                 <div class="questions-container__block response">
                     <details class="response-details">
                         <summary class="response-details__summary">Сколько по времени занимает изготовление пластиковых окон?</summary>
@@ -318,8 +337,94 @@
             </div>
         </section>
 
-         <!---->
+        <section class="contacts">
+            <h2 class="contacts__title" id="Контакты">Контакты</h2>
+            <div class="contacts-container">
+                <div class="contacts-container__content content">
+                    <p class="content-desc">Бесплатная консультация:</p>
+                    <div class="content-tel">
+                        <img class="content-tel__icon"src="./imges/contacts01.svg" alt="">
 
+                        <!-- чтобы при нажатии на ссылку шел автоматический набор-нужно href="tel:8(4932)34-31-40"-->
+                        <a class="content-tel__text" href="tel:8(4932)34-31-40" target="_blank">8 (4932) 34 - 31 - 40</a>
+                        <a class="content-tel__text" href="tel:8(905)109-31-40" target="_blank">8 (905) 109 - 31 - 40</a>
+                    </div>
+                    <div class="content-address">
+                        <img class="content-address__icon"src="./imges/contacts02.svg" alt="">
+                        <p class="content-address__text">г. Иваново, ул. Генерала Хлебникова, д.54, оф.303</p>
+                    </div>
+                    <div class="content-mail">
+                        <img class="content-mail__icon"src="./imges/contacts03.svg" alt="">
+
+                        <!-- чтобы при нажатии на ссылку шел автоматический переход на почту-нужно href="mailto:okna@haus.ru"-->
+                        <a class="content-mail__text" href="mailto:okna@haus.ru" target="_blank">okna@haus.ru</a>
+                    </div>
+                    <div class="content-workers">
+                        <div class="content-workers__aside aside">
+                            <p class="aside__text">Установку должны выполнять только эксперты. Нам доверяют сотни семей. Узнайте поробнее, какие решения вам подходят. Вы можете приобрести недорогие товары при гарантированно высоком качестве.</p>
+                            <div class="aside__icon icon">
+                                <a class="icon__img" href="https://twitter.com" target="_blank">
+                                    <img src="./imges/social_network01.svg" alt="">
+                                </a>
+                                <a class="icon__img" href="https://facebook.com" target="_blank">
+                                    <img src="./imges/social_network02.svg" alt="">
+                                </a>
+                                <a class="icon__img" href="https://instagram.com" target="_blank">
+                                    <img src="./imges/social_network03.svg" alt="">
+                                </a>
+                                <a class="icon__img" href="https://web.telegram.org/z/" target="_blank">
+                                    <img src="./imges/social_network04.svg" alt="">
+                                </a>
+                                <a class="icon__img" href="https://www.youtube.com" target="_blank">
+                                    <img src="./imges/social_network05.svg" alt="">
+                                </a>
+                                <a class="icon__img" href="https://vk.com/feed" target="_blank">
+                                    <img src="./imges/social_network06.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content-workers__picture picture">
+                            <img class="picture-ground" src="./imges/workers01.png" alt="">
+                            <div class="picture-hard">
+                                <img class="picture-hard__img" src="./imges/workers02.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <form class="contacts-container__form form-block" action="">
+                    <div class="form-block__info info">
+                        <h2 class="info-title">Остались вопросы?</h2>
+                        <input class="info-input" type="text" name="username" placeholder="Ваше имя">
+                        <input class="info-input" type="email" name="mail" placeholder="E-mail">
+                        <textarea class="info-textarea" name="text" placeholder="Ваш отзыв"></textarea>                         
+                        <div class="info-checkbox check">                                    
+                            <label class="check-label">
+                                <input class="check__input" type="checkbox">
+                                <span class="check--elem"></span>
+                                Я согласен(на) на обработку 
+                                <a class="link" href="#">персональных данных</a> 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-block__button">
+                        <button class="button">Отправить сообщение</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-container__block block">
+                    <img class="block__img" src="/imges/footer__logo.svg" alt="">
+                    <p class="block__description">© ООО “Окна Хаус”, 2011 - 2022</p>
+                </div>
+                <div class="footer-container__block block">
+                    <p class="block__description">Политика кофиденциальности</p>
+                    <p class="block__description">Пользовательское соглашение</p>
+                </div>
+            </div>
+        </footer>
     </body>
-
 </html>

@@ -1,7 +1,7 @@
 .questions {
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 47px;
+    margin-bottom: 86px;
 
     &-container {
         background-color: #EF7F1A;
@@ -18,7 +18,7 @@
         .response{
             margin-top: 40px;
 
-            &-details {
+            .response-details {
                 color: #2F2F51;
                 background-color: #FFFFFF;
                 margin: 15px 0;
@@ -27,37 +27,40 @@
                 font-size: 16px;
                 line-height: 19px;
                 font-weight: 400;
+                transition: 1s;
+
+                &:hover {
+                    box-shadow: 10px 0 20px #000000;
+                }
 
                 &__summary {
-                    display: block;
+                    position: relative;
+                    /**Свойство text-indent указывает размер отступа первой строки внутри текстового блока.**/
                     text-indent: 0;
                     background-color: #EEEEF3;
-                    cursor: none;
+                    cursor: pointer;
                     padding: 31px 20px;
                     font-size: 18px;
                     font-weight: 700;
-                    background-image: url(/imges/check_questionsOFF.jpg);
-                    background-repeat: no-repeat;
-                    background-position-x: 95%;
-                    background-position-y: 30px;
 
+                    
+                    &::after {
+                        content: url(/imges/check_questionsOFF.jpg);
+                        position: absolute;
+                        right: 40px;
+                        /**Свойство transition: transform плавно создает изменение**/
+                        transition: transform 200ms linear;
 
-                    &:hover {
-                        color: #EF7F04;
-                        background-color: #FFFFFF;
-                        background-image: url(/imges/check_questionsHOVER.jpg);
-                        background-repeat: no-repeat;
-                        background-position-x: 95%;
-                        background-position-y: 30px;
+                    } 
+
+                    &:hover::after {
+                        content: url(/imges/check_questionsHOVER.jpg);
                     }
 
-                    &:focus {
+                    &:hover {
+                        content: "";
+                        color: #EF7F04;
                         background-color: #FFFFFF;
-                        background-image: url(/imges/check_questionsON.jpg);
-                        color: #2F2F51;
-                        background-repeat: no-repeat;
-                        background-position: 95%;
-                        background-position-y: 30px;
                     }
                 }
 
@@ -76,6 +79,17 @@
                         }
                     }
                 }
+            }
+
+            /**отключаем стандартный значок "details" **/
+            .response-details summary::marker {
+                content: '';
+                display: none;
+            }
+            
+            /**Создаем условия ,если "details[open]" то "summary:after" изменяется **/
+            .response-details[open] .response-details__summary:after {
+                transform: rotate(180deg);
             }
         }
 

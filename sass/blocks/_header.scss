@@ -3,19 +3,92 @@
     .header-container {
         max-width: 1200px;
         margin: auto;
+        position: relative;
 
         .header-container__block {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 97px;
+
+            /**местоположение burger меню вместе с иконкой  **/
+            .header-burger {
+                display: none;
+        
+                /**иконка свернутого burger меню **/
+                .burger-trigger {
+                    width: 56px;
+                    height: 35px;
+                    background: url('/imges/burger.svg');
+                    display: block;
+                    cursor: pointer;
+                }
+        
+                /** скрытый квадратик checkbox **/
+                #burger-checkbox-trigger {
+                    display: none;
+                }
+        
+                /**развернутое burger меню и его местоположение**/
+                .burger-menu {
+                    background: #ffffff;
+                    border: 3px solid #ccc;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    position: absolute;
+                    box-shadow: 3px 0 5px #000000;
+                    opacity: 0;
+                    top: 50px;
+                    left: 100px;
+                    transition: opacity 200ms linear;
+
+                    &:hover {
+                        box-shadow: 10px 0 20px #000000;
+                    }
+        
+                    .burger-menu-item {
+                        width: 150px;
+
+                        a {
+                            color: #000000;
+                            line-height: 40px;
+                            padding: 20px 20px;
+        
+                            &:hover {
+                                color: #EF7F04;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                /**условие когда checkbox:checked то само burger-menu должно измениться(opacity:1 стать видимым) **/
+                #burger-checkbox-trigger:checked ~ .burger-menu {
+                    opacity: 1;
+                }
+
+                @media screen and (max-width: 992px) {
+                    display: contents;
+                }
+            }
     
             .nav {
                 display: flex;
+                position: relative;
     
                 &__item {
+                    display: block;
                     margin: 0 15px;
                     font-weight: 400;
+                    
+
+                    a {
+                        color: #000000;
+
+                        &:hover {
+                            color: #EF7F04;
+                        }
+
+                    }
                 }
 
                 @media screen and (max-width: 992px) {
@@ -27,6 +100,7 @@
                 display: flex;
     
                 .buttons-01 {
+                    
                     background: #EF7F04;
                     border-radius: 3px;
                     color:  #FFFFFF;
@@ -34,15 +108,30 @@
                     font-weight: 700;
                     padding: 10px 22px;
                     margin-right: 14px;
+                    transition: 200ms;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #dd9c57;
+                    }
+
+
                 }
     
                 .buttons-02 {
+                    cursor: pointer;
                     background-color: #3B3A63;
                     border-radius: 3px;
                     color:  #FFFFFF;
                     font-size: 13px;
                     font-weight: 700;
                     padding: 10px 22px;
+                    transition: 200ms;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #8b8ab9;
+                    }
                 }
             }
 
