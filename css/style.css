@@ -85,6 +85,8 @@ body {
 }
 .header .header-container .header-container__block .nav__item a:hover {
   color: #EF7F04;
+  border-top: 4px solid #EF7F04;
+  padding-top: 34px;
 }
 @media screen and (max-width: 992px) {
   .header .header-container .header-container__block .nav {
@@ -206,8 +208,9 @@ body {
   background-color: #E2E2E2;
   border-radius: 3px;
   padding: 0 0 0 10px;
+  transition: 1s;
 }
-.login-container__form .form-block__info .info-input:focus {
+.login-container__form .form-block__info .info-input:hover {
   box-shadow: 10px 0 20px #000000;
 }
 .login-container__form .form-block__info .check {
