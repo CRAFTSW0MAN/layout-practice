@@ -3,6 +3,11 @@
     height: 268px;
     border-radius: 3px;
     margin: 20px 3px;
+    transition: 1s;
+
+    &:hover {
+        box-shadow: 10px 0 20px #000000;
+    }
 }
 
 @mixin windows1 {
@@ -10,6 +15,11 @@
     height: 268px;
     border-radius: 3px;
     margin: 20px 3px;
+    transition: 1s;
+
+    &:hover {
+        box-shadow: 10px 0 20px #000000;
+    }
 }
 
 * {
@@ -20,7 +30,6 @@ body {
     background-color: #f2f2f2;
 }
 
-
 @import "./blocks/header";
 @import "./blocks/login";
 @import "./blocks/services";
@@ -29,3 +38,5 @@ body {
 @import "./blocks/about-company";
 @import "./blocks/portfolio.scss";
 @import "./blocks/questions";
+@import "./blocks/contacts";
+@import "./blocks/footer";

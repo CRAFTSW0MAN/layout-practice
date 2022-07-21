@@ -85,41 +85,69 @@
                     background-color: #E2E2E2;
                     border-radius: 3px;
                     padding: 0 0 0 10px;
+
+                    &:focus {
+                        box-shadow: 10px 0 20px #000000
+                    }
                 } 
                 
                 .check {
                     padding: 0 1em 0 3em;
-                    
 
+                    /**сам текст label, text-indent: отступ первой строки **/
                     .check-label {
-                        position: relative;
+                        display: inline-block;
                         font-size: 12px;
+                        text-indent: -35px;
+                        cursor: pointer;
+                        position: relative;
 
-                        .check-label__input {
-                            position: absolute;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            appearance: none;
-                        }
-    
-                        .check-label__box {
-                            position: absolute;
-                            margin-left: -25.5em;
-                            margin-top: -1em;
-                            height: 2em;
-                            width: 2em;
-                            background-image: url(/imges/checkOFF.svg);
-                        }
-
-                        .check-label__input:focus + .check-label__box {
-                            background-image: url(/imges/checkON.svg), url(/imges/checkOFF.svg);
-                            background-repeat: no-repeat;
+                        /**создаем новый уникальный "checkbox"**/
+                        .check--elem {
+                            content: "";
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            background: #E2E2E2;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            position: relative;
+                            left: -5px;
+                            top: 15px;
                         }
 
-                        .check-label__input:checked:focus + .check-label__box {
-                            background-image: url(/imges/checkOFF.svg);
-                            background-repeat: no-repeat;
+                        a {
+                            font-size: 12px;
+
+                            &:hover {
+                                color: #EF7F04;
+                                text-decoration: underline;
+                            }
                         }
+                    }
+
+                    /**скрываем сам "checkbox"**/
+                    .check-label input[type="checkbox"] {
+                        position: absolute;
+                        display: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                        appearance: none;
+                    }
+
+                    /**создаем галочку при состоянии ":checked" условие: если  для label:checked ,то новый "checkbox" с :after должен стать **/
+                    .check-label input[type="checkbox"]:checked + .check--elem:after {
+                        content: "";
+                        position: absolute;
+                        top: -5px;
+                        left: 5px;
+                        width: 25px;
+                        height: 25px;
+                        background: url(/imges/checkON.svg);
+                        background-repeat: no-repeat;
+                        cursor: pointer;
                     }
                 }
             }
@@ -132,6 +160,12 @@
                 font-weight: 700;
                 padding: 15px 35px;
                 margin: 20px 0 40px;
+                transition: 200ms;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #dd9c57;
+                }
             }
 
             .info-img {

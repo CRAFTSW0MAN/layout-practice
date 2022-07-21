@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif !important;
 }
@@ -9,19 +10,81 @@ body {
 .header .header-container {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 .header .header-container .header-container__block {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 97px;
+  /**местоположение burger меню вместе с иконкой  **/
+}
+.header .header-container .header-container__block .header-burger {
+  display: none;
+  /**иконка свернутого burger меню **/
+  /** скрытый квадратик checkbox **/
+  /**развернутое burger меню и его местоположение**/
+  /**условие когда checkbox:checked то само burger-menu должно измениться(opacity:1 стать видимым) **/
+}
+.header .header-container .header-container__block .header-burger .burger-trigger {
+  width: 56px;
+  height: 35px;
+  background: url("/imges/burger.svg");
+  display: block;
+  cursor: pointer;
+}
+.header .header-container .header-container__block .header-burger #burger-checkbox-trigger {
+  display: none;
+}
+.header .header-container .header-container__block .header-burger .burger-menu {
+  background: #ffffff;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 3px 0 5px #000000;
+  opacity: 0;
+  top: 50px;
+  left: 100px;
+  transition: opacity 200ms linear;
+}
+.header .header-container .header-container__block .header-burger .burger-menu:hover {
+  box-shadow: 10px 0 20px #000000;
+}
+.header .header-container .header-container__block .header-burger .burger-menu .burger-menu-item {
+  width: 150px;
+}
+.header .header-container .header-container__block .header-burger .burger-menu .burger-menu-item a {
+  color: #000000;
+  line-height: 40px;
+  padding: 20px 20px;
+}
+.header .header-container .header-container__block .header-burger .burger-menu .burger-menu-item a:hover {
+  color: #EF7F04;
+  text-decoration: underline;
+}
+.header .header-container .header-container__block .header-burger #burger-checkbox-trigger:checked ~ .burger-menu {
+  opacity: 1;
+}
+@media screen and (max-width: 992px) {
+  .header .header-container .header-container__block .header-burger {
+    display: contents;
+  }
 }
 .header .header-container .header-container__block .nav {
   display: flex;
+  position: relative;
 }
 .header .header-container .header-container__block .nav__item {
+  display: block;
   margin: 0 15px;
   font-weight: 400;
+}
+.header .header-container .header-container__block .nav__item a {
+  color: #000000;
+}
+.header .header-container .header-container__block .nav__item a:hover {
+  color: #EF7F04;
 }
 @media screen and (max-width: 992px) {
   .header .header-container .header-container__block .nav {
@@ -39,14 +102,25 @@ body {
   font-weight: 700;
   padding: 10px 22px;
   margin-right: 14px;
+  transition: 200ms;
+}
+.header .header-container .header-container__block .header-container__buttons .buttons-01:hover {
+  cursor: pointer;
+  background-color: #dd9c57;
 }
 .header .header-container .header-container__block .header-container__buttons .buttons-02 {
+  cursor: pointer;
   background-color: #3B3A63;
   border-radius: 3px;
   color: #FFFFFF;
   font-size: 13px;
   font-weight: 700;
   padding: 10px 22px;
+  transition: 200ms;
+}
+.header .header-container .header-container__block .header-container__buttons .buttons-02:hover {
+  cursor: pointer;
+  background-color: #8b8ab9;
 }
 @media screen and (max-width: 992px) {
   .header .header-container .header-container__block {
@@ -133,34 +207,63 @@ body {
   border-radius: 3px;
   padding: 0 0 0 10px;
 }
+.login-container__form .form-block__info .info-input:focus {
+  box-shadow: 10px 0 20px #000000;
+}
 .login-container__form .form-block__info .check {
   padding: 0 1em 0 3em;
+  /**сам текст label, text-indent: отступ первой строки **/
+  /**скрываем сам "checkbox"**/
+  /**создаем галочку при состоянии ":checked" условие: если  для label:checked ,то новый "checkbox" с :after должен стать **/
 }
 .login-container__form .form-block__info .check .check-label {
+  display: inline-block;
+  font-size: 12px;
+  text-indent: -35px;
+  cursor: pointer;
   position: relative;
+  /**создаем новый уникальный "checkbox"**/
+}
+.login-container__form .form-block__info .check .check-label .check--elem {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #E2E2E2;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  left: -5px;
+  top: 15px;
+}
+.login-container__form .form-block__info .check .check-label a {
   font-size: 12px;
 }
-.login-container__form .form-block__info .check .check-label .check-label__input {
+.login-container__form .form-block__info .check .check-label a:hover {
+  color: #EF7F04;
+  text-decoration: underline;
+}
+.login-container__form .form-block__info .check .check-label input[type=checkbox] {
   position: absolute;
+  display: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   appearance: none;
 }
-.login-container__form .form-block__info .check .check-label .check-label__box {
+.login-container__form .form-block__info .check .check-label input[type=checkbox]:checked + .check--elem:after {
+  content: "";
   position: absolute;
-  margin-left: -25.5em;
-  margin-top: -1em;
-  height: 2em;
-  width: 2em;
-  background-image: url(/imges/checkOFF.svg);
-}
-.login-container__form .form-block__info .check .check-label .check-label__input:focus + .check-label__box {
-  background-image: url(/imges/checkON.svg), url(/imges/checkOFF.svg);
+  top: -5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  background: url(/imges/checkON.svg);
   background-repeat: no-repeat;
-}
-.login-container__form .form-block__info .check .check-label .check-label__input:checked:focus + .check-label__box {
-  background-image: url(/imges/checkOFF.svg);
-  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .login-container__form .button {
   background: #EF7F04;
@@ -170,6 +273,11 @@ body {
   font-weight: 700;
   padding: 15px 35px;
   margin: 20px 0 40px;
+  transition: 200ms;
+}
+.login-container__form .button:hover {
+  cursor: pointer;
+  background-color: #dd9c57;
 }
 .login-container__form .info-img {
   position: absolute;
@@ -225,6 +333,10 @@ body {
   height: 268px;
   border-radius: 3px;
   margin: 20px 3px;
+  transition: 1s;
+}
+.services-container .windows-card:hover {
+  box-shadow: 10px 0 20px #000000;
 }
 .services-container .windows-card__name {
   display: flex;
@@ -248,6 +360,10 @@ body {
     height: 268px;
     border-radius: 3px;
     margin: 20px 3px;
+    transition: 1s;
+  }
+  .services-container .windows-card:hover {
+    box-shadow: 10px 0 20px #000000;
   }
 }
 .services-container .windows .windows-01 {
@@ -289,10 +405,12 @@ body {
   margin-bottom: 48px;
 }
 .products-container__menu .button {
+  cursor: pointer;
   border-radius: 3px;
   font-size: 18px;
   padding: 10px 22px;
   margin: 15px;
+  transition: 200ms;
 }
 .products-container__menu .button:focus {
   background-color: #EF7F04;
@@ -306,6 +424,10 @@ body {
   margin-bottom: 48px;
   border-radius: 3px;
   height: 461px;
+  transition: 1s;
+}
+.products-container .specification:hover {
+  box-shadow: 10px 0 20px #000000;
 }
 .products-container .specification__image {
   background-image: url(/imges/glass.jpg);
@@ -438,6 +560,11 @@ body {
   color: #FFFFFF;
   padding: 10px 30px;
   margin-bottom: 40px;
+  transition: 200ms;
+}
+.guarantee-button:hover {
+  cursor: pointer;
+  background-color: #8b8ab9;
 }
 .guarantee-button__img {
   margin: 5px 15px 5px 0;
@@ -464,6 +591,7 @@ body {
   font-size: 18px;
   padding: 10px 22px;
   margin: 15px;
+  transition: 200ms;
 }
 .about-company__menu .button:focus {
   background-color: #EF7F04;
@@ -477,6 +605,10 @@ body {
   margin-bottom: 48px;
   border-radius: 3px;
   height: 461px;
+  transition: 1s;
+}
+.about-company .preview:hover {
+  box-shadow: 10px 0 20px #000000;
 }
 .about-company .preview-block {
   width: 50%;
@@ -559,6 +691,11 @@ body {
   font-weight: 700;
   padding: 20px 40px;
   margin-bottom: 48px;
+  transition: 200ms;
+}
+.about-company__button .button:hover {
+  cursor: pointer;
+  background-color: #dd9c57;
 }
 
 .portfolio {
@@ -582,6 +719,10 @@ body {
   width: 215px;
   height: 216px;
   border-radius: 3px;
+  transition: 1s;
+}
+.portfolio-container__img:hover {
+  box-shadow: 10px 0 20px #000000;
 }
 @media screen and (max-width: 992px) {
   .portfolio-container__img:last-child {
@@ -592,7 +733,7 @@ body {
 .questions {
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 47px;
+  margin-bottom: 86px;
 }
 .questions-container {
   background-color: #EF7F1A;
@@ -607,8 +748,10 @@ body {
 }
 .questions-container .response {
   margin-top: 40px;
+  /**отключаем стандартный значок "details" **/
+  /**Создаем условия ,если "details[open]" то "summary:after" изменяется **/
 }
-.questions-container .response-details {
+.questions-container .response .response-details {
   color: #2F2F51;
   background-color: #FFFFFF;
   margin: 15px 0;
@@ -617,41 +760,41 @@ body {
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
+  transition: 1s;
 }
-.questions-container .response-details__summary {
-  display: block;
+.questions-container .response .response-details:hover {
+  box-shadow: 10px 0 20px #000000;
+}
+.questions-container .response .response-details__summary {
+  position: relative;
+  /**Свойство text-indent указывает размер отступа первой строки внутри текстового блока.**/
   text-indent: 0;
   background-color: #EEEEF3;
-  cursor: none;
+  cursor: pointer;
   padding: 31px 20px;
   font-size: 18px;
   font-weight: 700;
-  background-image: url(/imges/check_questionsOFF.jpg);
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 30px;
 }
-.questions-container .response-details__summary:hover {
+.questions-container .response .response-details__summary::after {
+  content: url(/imges/check_questionsOFF.jpg);
+  position: absolute;
+  right: 40px;
+  /**Свойство transition: transform плавно создает изменение**/
+  transition: transform 200ms linear;
+}
+.questions-container .response .response-details__summary:hover::after {
+  content: url(/imges/check_questionsHOVER.jpg);
+}
+.questions-container .response .response-details__summary:hover {
+  content: "";
   color: #EF7F04;
   background-color: #FFFFFF;
-  background-image: url(/imges/check_questionsHOVER.jpg);
-  background-repeat: no-repeat;
-  background-position-x: 95%;
-  background-position-y: 30px;
 }
-.questions-container .response-details__summary:focus {
-  background-color: #FFFFFF;
-  background-image: url(/imges/check_questionsON.jpg);
-  color: #2F2F51;
-  background-repeat: no-repeat;
-  background-position: 95%;
-  background-position-y: 30px;
-}
-.questions-container .response-details .menu .menu-list {
+.questions-container .response .response-details .menu .menu-list {
   font-size: 16px;
   line-height: 19px;
 }
-.questions-container .response-details .menu .menu-list__li:before {
+.questions-container .response .response-details .menu .menu-list__li:before {
   content: "";
   height: 50px;
   width: 50px;
@@ -659,8 +802,258 @@ body {
   margin: 0 10px 0 0;
   background-color: #000000;
 }
+.questions-container .response .response-details summary::marker {
+  content: "";
+  display: none;
+}
+.questions-container .response .response-details[open] .response-details__summary:after {
+  transform: rotate(180deg);
+}
 @media screen and (max-width: 992px) {
   .questions-container {
     padding: 40px 40px 65px 40px;
   }
+}
+
+.contacts {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 51px;
+  color: #2F2F51;
+}
+.contacts__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contacts-container .content {
+  max-width: 55%;
+  padding: 60px 0 0 40px;
+}
+.contacts-container .content-desc {
+  font-size: 18px;
+  font-weight: 700;
+}
+.contacts-container .content-tel {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 50px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contacts-container .content-tel__icon {
+  margin-right: 30px;
+}
+.contacts-container .content-tel__text {
+  margin-right: 30px;
+}
+.contacts-container .content-tel a {
+  color: #000000;
+}
+.contacts-container .content-tel a:hover {
+  text-decoration: underline;
+}
+.contacts-container .content-address {
+  display: flex;
+  color: #000000;
+  font-size: 18px;
+}
+.contacts-container .content-address__icon {
+  margin-right: 30px;
+}
+.contacts-container .content-mail {
+  display: flex;
+  margin: 18px 0 50px 0;
+  font-size: 18px;
+}
+.contacts-container .content-mail__icon {
+  margin-right: 30px;
+}
+.contacts-container .content-mail a {
+  color: #000000;
+}
+.contacts-container .content-mail a:hover {
+  text-decoration: underline;
+}
+.contacts-container .content-workers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contacts-container .content-workers .aside {
+  max-width: 220px;
+  line-height: 22px;
+}
+.contacts-container .content-workers .aside__text {
+  margin: 0 0 40px 0;
+}
+.contacts-container .content-workers .aside__icon {
+  max-width: 220px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacts-container .content-workers .aside__icon .icon__img:nth-child(2) {
+  padding: 4px 0 0 0;
+}
+.contacts-container .content-workers .picture {
+  position: relative;
+}
+.contacts-container .content-workers .picture-ground {
+  position: absolute;
+  width: 327px;
+  height: 365px;
+  left: 10px;
+}
+.contacts-container .content-workers .picture-hard {
+  position: absolute;
+  opacity: 0.6;
+  top: 75px;
+  left: 7px;
+}
+.contacts-container__form {
+  background-color: #FFFFFF;
+  margin-top: 60px;
+  width: 515px;
+  height: 565px;
+  border-radius: 10px;
+  text-align: center;
+}
+.contacts-container__form .form-block__info {
+  width: 515px;
+}
+.contacts-container__form .form-block__info .info-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 55px 0 30px 0;
+}
+.contacts-container__form .form-block__info .info-input {
+  display: block;
+  margin: 27px auto;
+  color: #424268;
+  width: 400px;
+  height: 55px;
+  background-color: #E2E2E2;
+  border-radius: 3px;
+  padding: 0 0 0 20px;
+  transition: 1s;
+}
+.contacts-container__form .form-block__info .info-input:hover {
+  box-shadow: 10px 0 20px #000000;
+}
+.contacts-container__form .form-block__info .info-textarea {
+  resize: none;
+  display: block;
+  margin: 27px auto;
+  line-height: 19px;
+  color: #424268;
+  width: 380px;
+  height: 110px;
+  background-color: #E2E2E2;
+  border-radius: 3px;
+  padding: 20px 20px;
+  transition: 1s;
+}
+.contacts-container__form .form-block__info .info-textarea:hover {
+  box-shadow: 10px 0 20px #000000;
+}
+.contacts-container__form .form-block__info .check {
+  padding: 0 1em 0 3em;
+  /**сам текст label **/
+  /**скрываем сам "checkbox"**/
+  /**создаем галочку при состоянии ":checked" условие: если  для label:checked ,то новый "checkbox" с :after должен стать **/
+}
+.contacts-container__form .form-block__info .check .check-label {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  /**создаем новый уникальный "checkbox"**/
+}
+.contacts-container__form .form-block__info .check .check-label .check--elem {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #E2E2E2;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  left: -20px;
+  top: 10px;
+}
+.contacts-container__form .form-block__info .check .check-label a {
+  font-size: 14px;
+  color: #EF7F1A;
+}
+.contacts-container__form .form-block__info .check .check-label a:hover {
+  text-decoration: underline;
+}
+.contacts-container__form .form-block__info .check .check__input input[type=checkbox] {
+  position: absolute;
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  appearance: none;
+}
+.contacts-container__form .form-block__info .check .check-label input[type=checkbox]:checked + .check--elem:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(/imges/contactsON.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  left: 5px;
+  top: 3px;
+}
+.contacts-container__form .button {
+  background: #2F2F51;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 15px 35px;
+  margin: 20px 45px;
+  transition: 200ms;
+}
+.contacts-container__form .button:hover {
+  cursor: pointer;
+  background-color: #8b8ab9;
+}
+@media screen and (max-width: 992px) {
+  .contacts-container__form {
+    margin-top: 140px;
+  }
+}
+
+.footer {
+  background-color: #2F2F51;
+  height: 146px;
+}
+.footer-container {
+  padding: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-container__block {
+  display: flex;
+  align-items: center;
+}
+.footer-container__block .block__description {
+  margin-left: 20px;
+}
+.footer-container__block .block__description:first-child {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */

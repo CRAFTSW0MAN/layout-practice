@@ -1,0 +1,259 @@
+.contacts {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 51px;
+    color: #2F2F51;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .content {
+            max-width: 55%;
+            padding: 60px 0 0 40px;
+
+            &-desc {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            &-tel {
+                display: flex;
+                justify-content: space-between;
+                padding: 40px 0 50px 0;
+                font-size: 22px;
+                font-weight: 700;
+
+                &__icon {
+                    margin-right: 30px;
+                }
+
+                &__text {
+                    margin-right: 30px;
+                }
+
+                a {
+                    color: #000000;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-address {
+                display: flex;
+                color: #000000;
+                font-size: 18px;
+
+                &__icon {
+                    margin-right: 30px;
+                }
+            }
+
+            &-mail {
+                display: flex;
+                margin: 18px 0 50px 0;
+                font-size: 18px;
+
+                &__icon {
+                    margin-right: 30px;
+                }
+
+                a {
+                    color: #000000;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-workers {
+                display: flex;
+                flex-wrap: wrap;
+
+                .aside {
+                    max-width: 220px;
+                    line-height: 22px;
+
+                    &__text {
+                        margin: 0 0 40px 0;
+                    }
+
+                    &__icon {
+                        max-width: 220px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+                        .icon__img {
+                            &:nth-child(2) {
+                                padding: 4px 0 0 0;
+                            }
+                        }
+
+                    }
+                }
+
+                .picture {
+                    position: relative;
+
+                    &-ground {
+                        position: absolute;
+                        width: 327px;
+                        height: 365px;
+                        left: 10px;
+                    }
+
+                    &-hard {
+                        position: absolute;
+                        opacity: 0.6;
+                        top: 75px;
+                        left: 7px;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            background-color: #FFFFFF;
+            margin-top: 60px;
+            width: 515px;
+            height:  565px;
+            border-radius: 10px;
+            text-align: center;
+
+            .form-block__info {
+                width: 515px;
+
+                .info-title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin: 55px 0 30px 0;
+                }
+    
+                .info-input {
+                    display: block;
+                    margin: 27px auto;
+                    color: #424268;
+                    width: 400px;
+                    height: 55px;
+                    background-color: #E2E2E2;
+                    border-radius: 3px;
+                    padding: 0 0 0 20px;
+                    transition: 1s;
+
+                    &:hover {
+                        box-shadow: 10px 0 20px #000000;
+                    }
+                }
+                .info-textarea {
+                    resize: none;
+                    display: block;
+                    margin: 27px auto;
+                    line-height: 19px;
+                    color: #424268;
+                    width: 380px;
+                    height: 110px;
+                    background-color: #E2E2E2;
+                    border-radius: 3px;
+                    padding: 20px 20px;
+                    transition: 1s;
+
+                    &:hover {
+                        box-shadow: 10px 0 20px #000000;
+                    }
+                }
+
+                .check {
+                    padding: 0 1em 0 3em;
+
+                    /**сам текст label **/
+                    .check-label {
+                        display: inline-block;
+                        font-size: 14px;
+                        cursor: pointer;
+                        position: relative;
+
+                        /**создаем новый уникальный "checkbox"**/
+                        .check--elem {
+                            content: "";
+                            display: inline-block;
+                            width: 25px;
+                            height: 25px;
+                            background: #E2E2E2;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            position: relative;
+                            left: -20px;
+                            top: 10px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            color: #EF7F1A;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+
+                        }
+                    }
+
+                    /**скрываем сам "checkbox"**/
+                    .check__input input[type="checkbox"] {
+                        position: absolute;
+                        display: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                        appearance: none;
+                    }
+
+                    /**создаем галочку при состоянии ":checked" условие: если  для label:checked ,то новый "checkbox" с :after должен стать **/
+                    .check-label input[type="checkbox"]:checked + .check--elem:after {
+                        content: "";
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        background: url(/imges/contactsON.svg);
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                        left: 5px;
+                        top: 3px;
+                    }
+                }
+            }
+
+            .button {
+                background: #2F2F51;
+                border-radius: 3px;
+                color:  #FFFFFF;
+                font-weight: 700;
+                padding: 15px 35px;
+                margin: 20px 45px;
+                transition: 200ms;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #8b8ab9;
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                margin-top: 140px;
+            }
+        }
+    }
+}
+
+

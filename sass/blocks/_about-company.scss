@@ -20,11 +20,14 @@
             font-size: 18px;
             padding: 10px 22px;
             margin: 15px;
+            transition: 200ms;
+
+            &:focus {
+                background-color: #EF7F04;
+                color: white;
+            }
         }
-        .button:focus {
-            background-color: #EF7F04;
-            color: white;
-        }
+        
     }
 
     .preview {
@@ -35,6 +38,11 @@
         margin-bottom: 48px;
         border-radius: 3px;
         height: 461px;
+        transition: 1s;
+
+        &:hover {
+            box-shadow: 10px 0 20px #000000;
+        }
 
         &-block {
             width: 50%;
@@ -125,6 +133,12 @@
             font-weight: 700;
             padding: 20px 40px;
             margin-bottom: 48px;
+            transition: 200ms;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #dd9c57;
+            }
         }
     }
 }
