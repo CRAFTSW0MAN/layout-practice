@@ -4,7 +4,7 @@
     text-align: center;
 
     &-container {
-        background-image: url(../../imges/guarantee_backgraund.jpg);
+        background-image: url(../imges/guarantee_backgraund.jpg);
         background-repeat: no-repeat;
         border-radius: 3px;
 
@@ -55,7 +55,7 @@
         }
 
         @media screen and (max-width: 992px) {
-            background-image: url(../../imges/guarantee_backgraund2.jpg);
+            background-image: url(../imges/guarantee_backgraund2.jpg);
             margin: 0 30px;
         }        
     }
