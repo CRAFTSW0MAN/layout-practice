@@ -45,7 +45,7 @@
 
                     
                     &::after {
-                        content: url(/imges/check_questionsOFF.jpg);
+                        content: url(../../imges/check_questionsOFF.jpg);
                         position: absolute;
                         right: 40px;
                         /**Свойство transition: transform плавно создает изменение**/
@@ -54,7 +54,7 @@
                     } 
 
                     &:hover::after {
-                        content: url(/imges/check_questionsHOVER.jpg);
+                        content: url(../../imges/check_questionsHOVER.jpg);
                     }
 
                     &:hover {

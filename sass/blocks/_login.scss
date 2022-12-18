@@ -1,7 +1,7 @@
 .login {
     max-height: 562px;
     max-width: 1920px;
-    background-image: url(../imges/login1.jpg), url(../imges/login2.jpg);
+    background-image: url(../../imges/login1.jpg), url(../../imges/login2.jpg);
     background-repeat: no-repeat;
     background-position: 0 0, 1219px 0;
     margin: auto;
@@ -146,7 +146,7 @@
                         left: 5px;
                         width: 25px;
                         height: 25px;
-                        background: url(../imges/checkON.svg);
+                        background: url(../../imges/checkON.svg);
                         background-repeat: no-repeat;
                         cursor: pointer;
                     }
@@ -192,7 +192,7 @@
     @media screen and (max-width: 992px) {
         max-height: 562px;
         width: 992px;
-        background-image: url(../imges/login3.png), url(../imges/login4.png);
+        background-image: url(../../imges/login3.png), url(../../imges/login4.png);
         background-position: 0 0, 630px 0;              
     }
 }
